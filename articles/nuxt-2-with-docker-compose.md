@@ -1,5 +1,5 @@
 ---
-title: "Docker composeでnuxt 2の開発環境を整えるメモ"
+title: "Docker composeでNuxt.js 2.xの開発環境を整えるメモ"
 emoji: "⛰️"
 type: "tech"
 topics: ["docker", "nuxt"]
