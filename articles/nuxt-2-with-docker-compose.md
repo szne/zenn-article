@@ -1,5 +1,5 @@
 ---
-title: "Docker composeでNuxt.js 2.xの開発環境を整えるメモ"
+title: "Docker composeでNuxt.js 2.xの開発環境を整える"
 emoji: "⛰️"
 type: "tech"
 topics: ["docker", "nuxt"]
@@ -10,28 +10,34 @@ published: true
 これはNuxt.js 2.x向けの記事です、Nuxt 3でこの方法が使用できるかどうかは不明です
 :::
 
-:::details 更新履歴
-**2022/3/5**
+## 更新履歴
+
+:::details
+
+## 2022/3/5
+
 - Nuxt 3(Beta)がリリースされているため、タイトルを変更しました、Nuxt 3向けの記事はしばらくしたら書くと思います。
 - Zenn CLIを導入したついでに記事のslugを変更しました、これによりいいねがリセットされてしまいましたのでブクマ用にいいねしてた人はよければ再度お願いします。
 
-**2021/10**
+## 2021/10
+
 - 記事を公開しました
 :::
 
 個人用メモです、間違っていたら訂正お願いします。
 いろいろなところに詰まった結果ほぼほぼこれと同じになりました
-https://qiita.com/ngplus6655/items/6dd701450b9f9e8e2b86
-手っ取り早く構築したい人はGithubからどうぞ
-https://github.com/szne/nuxt-with-docker
+<https://qiita.com/ngplus6655/items/6dd701450b9f9e8e2b86>
+手っ取り早く構築したい人はGitHubからどうぞ
+<https://github.com/szne/nuxt-with-docker>
 
-# 環境
+## 環境
 
 ```sh
 > systeminfo
 OS Name: Microsoft Windows 10 Home
 OS Version: 10.0.19043 N/A Build 19043
 ```
+
 ```sh
 > docker -v
 Docker version 20.10.5, build 55c4c88
@@ -39,24 +45,28 @@ Docker version 20.10.5, build 55c4c88
 docker-compose version 1.29.0, build 07737305
 ```
 
-# Docker とかの下ごしらえ
+## Docker とかの下ごしらえ
 
 プロジェクトを始めたいディレクトリに移動します、この記事では``NuxtProject``としています。
+
 ```diff
 + NuxtProject/
 ```
 
-## Dockerfile の作成
+### Dockerfile の作成
 
 > Docker は Dockerfile から命令を読み込み、自動的にイメージをビルドできます。
 > [Dockerfile リファレンス](https://docs.docker.jp/engine/reference/builder.html)
 
 DockerfileをNuxtProjectの中に追加します
+
 ```diff
 NuxtProject/
 + └ Dockerfile
 ```
+
 Dockerfile内は以下のように記述します
+
 ```Dockerfile:Dockerfile
 FROM node:alpine
 
@@ -67,17 +77,19 @@ ENV HOST 0.0.0.0
 EXPOSE 3000
 ```
 
-## docker-compose.yml の作成
+### docker-compose.yml の作成
 
 > Compose とは、複数のコンテナを定義し実行する Docker アプリケーションのためのツールです。
 > [docker Compose 概要](https://docs.docker.jp/compose/overview.html)
 
 docker-compose.ymlを追加します
+
 ```diff
 NuxtProject/
 + ├ docker-compose.yml
   └ Dockerfile
 ```
+
 ```yml:docker-compose.yml
 version: '3.8'
 
@@ -103,16 +115,19 @@ volumes:
 - マウントするボリュームの位置の変更
 
 を行っています。
-ちなみにnode_modulesのボリュームを指定しないと画面が表示されずに真っ白になります。
-# コンテナの起動
+ちなみに、node_modulesのボリュームを指定しないと画面が表示されずに真っ白となります。
+
+## コンテナの起動
 
 Dockerイメージを起動します
+
 ```sh
 > docker compose up -d
 ```
 
 ``-d``オプションでコンテナはバックグラウンドで起動し、そのまま実行し続けます。[Docker-docs-jaより](https://docs.docker.jp/compose/reference/up.html)
 コンテナが起動していくかどうかを確認します
+
 ```sh
 > docker-compose ps
 NAME                SERVICE             STATUS              PORTS
@@ -121,6 +136,7 @@ nxts_app_1          app                 running             0.0.0.0:3000->3000/t
 
 コンテナが起動しているのを確認したので次の工程に移ります
 この時点でディレクトリはこうなっているはずです
+
 ```diff
 NuxtProject/
 ├ src/
@@ -129,16 +145,16 @@ NuxtProject/
 └ Dockerfile
 ```
 
-# Nuxt.js のインストール
+## Nuxt.js のインストール
 
-## コンテナ内に接続
+### コンテナ内に接続
 
 ```sh
 > docker-compose exec app /bin/sh
 /src # 
 ```
 
-## create-nuxt-app を使ってNuxt.js をインストール
+### create-nuxt-app を使ってNuxt.js をインストール
 
 ```sh
 /src # yarn create nuxt-app . --overwrite-dir
@@ -146,9 +162,9 @@ NuxtProject/
 
 ``--overwrite-dir``オプションはそこにあるファイルを上書きして生成するという手順です。つけないと``node_modules``があるのでつまります。
 分からない場合は全部Enterを押せばうまくいくはずです、インストールには5分ほどかかります。
-(もしもスクラッチで始めたい場合は[公式ドキュメント](https://ja.nuxtjs.org/docs/2.x/get-started/installation)に方法が乗っています)
+(もしもスクラッチで始めたい場合は[公式ドキュメント](https://ja.nuxtjs.org/docs/2.x/get-started/installation)に方法が乗っています）
 
-# 起動
+## 起動
 
 ```sh
 /src # yarn dev
@@ -184,9 +200,9 @@ $ nuxt
 
 ```
 
-# 最終的なディレクトリ構成
+## 最終的なディレクトリ構成
 
-```
+```diff
 NuxtProject/
 ├ src/
 │ ├ .nuxt/
@@ -204,11 +220,13 @@ NuxtProject/
 ├ docker-compose.yml
 └ Dockerfile
 ```
-# トラブルシューティング
+
+## トラブルシューティング
 
 ### ページが表示されない(ERR_EMPTY_RESPONSE)
 
-package.jsonの``"scripts":{"dev": nuxt}``を以下のようにする 
+package.jsonの``"scripts":{"dev": nuxt}``を以下のようにする
+
 ```json:package.json
 "scripts": {
   "dev": "HOST=0.0.0.0 PORT=3000 nuxt",
@@ -217,21 +235,21 @@ package.jsonの``"scripts":{"dev": nuxt}``を以下のようにする
 }
 ```
 
-# 参考
+## 参考
 
-https://ja.nuxtjs.org/docs/2.x/get-started/installation
-https://qiita.com/shun012526/items/a9137fcbaae303500ce1
-https://qiita.com/ngplus6655/items/6dd701450b9f9e8e2b86
-https://www.ikkitang1211.site/entry/2020/10/11/213824
+<https://ja.nuxtjs.org/docs/2.x/get-started/installation>
+<https://qiita.com/shun012526/items/a9137fcbaae303500ce1>
+<https://qiita.com/ngplus6655/items/6dd701450b9f9e8e2b86>
+<https://www.ikkitang1211.site/entry/2020/10/11/213824>
 
-# 使用したツール
+## 使用したツール
 
-https://codogue.com/asciitree/
+<https://codogue.com/asciitree/>
 
 ---
 
 ### 最後に
 
 途中でなぜかページ表示されずに3日くらい詰まってたんですけど[この記事](https://qiita.com/ngplus6655/items/6dd701450b9f9e8e2b86)で全部解決しました。
-もともとはあまりいい感じの導入方法が書かれた記事がないなーっていう理由で書いたんですけど必要性ないですね。
+もともとはあまりいい感じの導入方法が書かれている記事がないなーっていう理由で書いたんですけど必要性ないですね。
 上の記事を書いてくれた[@ngplus6655](https://qiita.com/ngplus6655)さん、ジレンマから救っていただき本当にありがとうございました。
