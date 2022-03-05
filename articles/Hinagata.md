@@ -6,9 +6,11 @@ topics: []
 published: false
 ---
 
-:::details 更新履歴
-**yyyy/mm/dd**
+## 更新履歴
+
+:::details
+
+## yyyy/mm/dd
+
 - 記事を公開しました
 :::
-
-# 参考
