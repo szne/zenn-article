@@ -26,9 +26,9 @@ published: true
 
 個人用メモです、間違っていたら訂正お願いします。
 いろいろなところに詰まった結果ほぼほぼこれと同じになりました
-<https://qiita.com/ngplus6655/items/6dd701450b9f9e8e2b86>
+https://qiita.com/ngplus6655/items/6dd701450b9f9e8e2b86
 手っ取り早く構築したい人はGitHubからどうぞ
-<https://github.com/szne/nuxt-with-docker>
+https://github.com/szne/nuxt-with-docker
 
 ## 環境
 
@@ -237,14 +237,14 @@ package.jsonの``"scripts":{"dev": nuxt}``を以下のようにする
 
 ## 参考
 
-<https://ja.nuxtjs.org/docs/2.x/get-started/installation>
-<https://qiita.com/shun012526/items/a9137fcbaae303500ce1>
-<https://qiita.com/ngplus6655/items/6dd701450b9f9e8e2b86>
-<https://www.ikkitang1211.site/entry/2020/10/11/213824>
+https://ja.nuxtjs.org/docs/2.x/get-started/installation
+https://qiita.com/shun012526/items/a9137fcbaae303500ce1
+https://qiita.com/ngplus6655/items/6dd701450b9f9e8e2b86
+https://www.ikkitang1211.site/entry/2020/10/11/213824
 
 ## 使用したツール
 
-<https://codogue.com/asciitree/>
+https://codogue.com/asciitree/
 
 ---
 
