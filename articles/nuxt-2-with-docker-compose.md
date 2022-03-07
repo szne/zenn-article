@@ -1,5 +1,5 @@
 ---
-title: "Docker composeでNuxt.js 2.xの開発環境を整える"
+title: "Docker composeでNuxt.js 2.xの開発環境を整えるメモ"
 emoji: "⛰️"
 type: "tech"
 topics: ["docker", "nuxt"]
@@ -7,7 +7,10 @@ published: true
 ---
 
 :::message
-これはNuxt.js 2.x向けの記事です、Nuxt 3でこの方法が使用できるかどうかは不明です
+これはNuxt.js 2.x向けの文章です、Nuxt 3でこの方法が使用できるかどうかは不明です
+:::
+:::message
+Docker、nuxt.jsを始めたての人が書いた文章です、
 :::
 
 ## 更新履歴
@@ -16,12 +19,12 @@ published: true
 
 2022/3/5
 
-- Nuxt 3(Beta)がリリースされているため、タイトルを変更しました、Nuxt 3向けの記事はしばらくしたら書くと思います。
-- Zenn CLIを導入したついでに記事のslugを変更しました、これによりいいねがリセットされてしまいましたのでブクマ用にいいねしてた人はよければ再度お願いします。
+- Nuxt 3(Beta)がリリースされているため、タイトルを変更しました、Nuxt 3向けの文章はしばらくしたら書くと思います。
+- Zenn CLIを導入したついでに文章のslugを変更しました、これによりいいねがリセットされてしまいましたのでブクマ用にいいねしてた人はよければ再度お願いします。
 
 2021/9/7
 
-- 記事を公開しました
+- 文章を公開しました
 :::
 
 個人用メモです、間違っていたら訂正お願いします。
@@ -47,7 +50,7 @@ docker-compose version 1.29.0, build 07737305
 
 ## Docker とかの下ごしらえ
 
-プロジェクトを始めたいディレクトリに移動します、この記事では``NuxtProject``としています。
+プロジェクトを始めたいディレクトリに移動します、この文章では``NuxtProject``としています。
 
 ```diff
 + NuxtProject/
@@ -73,7 +76,7 @@ FROM node:alpine
 RUN apk update && \
     yarn global add create-nuxt-app
 
-ENV HOST 0.0.0.0
+ENV HOST=0.0.0.0
 EXPOSE 3000
 ```
 
@@ -109,10 +112,11 @@ volumes:
   node_modules_volume:
 ```
 
-書いてあることは[これ](https://qiita.com/ngplus6655/items/6dd701450b9f9e8e2b86#%E3%83%93%E3%83%AB%E3%83%89%E8%B5%B7%E5%8B%95)とだいたい同じですが、
+書いてあることは[これ](https://qiita.com/ngplus6655/items/6dd701450b9f9e8e2b86#%E3%83%93%E3%83%AB%E3%83%89%E8%B5%B7%E5%8B%95)とほぼ同一です。ただし
 
 - ホットリロードを有効化するために``CHOKIDAR_USEPOLLING=true``を追加
 - マウントするボリュームの位置の変更
+- node_modulesを
 
 を行っています。
 ちなみに、node_modulesのボリュームを指定しないと画面が表示されずに真っ白となります。
@@ -125,7 +129,8 @@ Dockerイメージを起動します
 > docker compose up -d
 ```
 
-``-d``オプションでコンテナはバックグラウンドで起動し、そのまま実行し続けます。[Docker-docs-jaより](https://docs.docker.jp/compose/reference/up.html)
+> ``-d``オプションでコンテナはバックグラウンドで起動し、そのまま実行し続けます。
+> [Docker-docs-jaより](https://docs.docker.jp/compose/reference/up.html)
 コンテナが起動していくかどうかを確認します
 
 ```sh
@@ -252,4 +257,4 @@ https://codogue.com/asciitree/
 
 途中でなぜかページ表示されずに3日くらい詰まってたんですけど[この記事](https://qiita.com/ngplus6655/items/6dd701450b9f9e8e2b86)で全部解決しました。
 もともとはあまりいい感じの導入方法が書かれている記事がないなーっていう理由で書いたんですけど必要性ないですね。
-上の記事を書いてくれた[@ngplus6655](https://qiita.com/ngplus6655)さん、ジレンマから救っていただき本当にありがとうございました。
+上の記事を書いてくれた[ngplus6655](https://qiita.com/ngplus6655)さん、ジレンマから救っていただき本当にありがとうございました。
