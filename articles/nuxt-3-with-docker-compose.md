@@ -10,7 +10,7 @@ published: true
 
 :::details click
 
-yyyy/mm/dd
+2022/3/11
 
 - 記事を公開しました
 :::
