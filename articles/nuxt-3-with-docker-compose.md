@@ -19,6 +19,9 @@ published: true
 https://zenn.dev/szn/articles/nuxt-2-with-docker-compose
 これのNuxt 3バージョンのようなものです。
 
+手っ取り早く構築したい人はこちらからどうぞ
+https://github.com/szne/Nuxt_3_with_docker
+
 ## 環境
 
 ```sh
