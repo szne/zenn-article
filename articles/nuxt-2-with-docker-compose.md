@@ -124,6 +124,7 @@ Dockerイメージを起動します
 
 > ``-d``オプションでコンテナはバックグラウンドで起動し、そのまま実行し続けます。
 > [Docker-docs-jaより](https://docs.docker.jp/compose/reference/up.html)
+
 コンテナが起動しているかどうかを確認します
 
 ```sh
