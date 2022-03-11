@@ -9,9 +9,6 @@ published: true
 :::message
 これはNuxt.js 2.x向けの文章です、Nuxt 3でこの方法が使用できるかどうかは不明です
 :::
-:::message
-Docker、nuxt.jsを始めたての人が書いた文章です、
-:::
 
 ## 更新履歴
 
@@ -75,9 +72,6 @@ FROM node:alpine
 
 RUN apk update && \
     yarn global add create-nuxt-app
-
-ENV HOST=0.0.0.0
-EXPOSE 3000
 ```
 
 ### docker-compose.yml の作成
@@ -107,6 +101,7 @@ services:
       - node_modules_volume:/src/node_modules
     tty: true
     environment:
+    - HOST=0.0.0.0
     - CHOKIDAR_USEPOLLING=true
 volumes:
   node_modules_volume:
@@ -116,10 +111,8 @@ volumes:
 
 - ホットリロードを有効化するために``CHOKIDAR_USEPOLLING=true``を追加
 - マウントするボリュームの位置の変更
-- node_modulesを
 
 を行っています。
-ちなみに、node_modulesのボリュームを指定しないと画面が表示されずに真っ白となります。
 
 ## コンテナの起動
 
