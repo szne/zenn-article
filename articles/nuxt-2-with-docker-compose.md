@@ -7,12 +7,16 @@ published: true
 ---
 
 :::message
-これはNuxt.js 2.x向けの文章です、Nuxt 3でこの方法が使用できるかどうかは不明です
+これはNuxt.js 2.x向けの文章です、Nuxt 3で構築したい人は[こちら](nuxt-3-with-docker-compose.md)を参照してください。
 :::
 
 ## 更新履歴
 
 :::details click
+
+2022/3/11
+
+- Nuxt 3向けの文章を書きました、[こちら](nuxt-3-with-docker-compose.md)から閲覧できます。
 
 2022/3/5
 
