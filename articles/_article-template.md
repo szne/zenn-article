@@ -8,9 +8,9 @@ published: false
 
 ## 更新履歴
 
-:::details
+:::details click
 
-## yyyy/mm/dd
-
+yyyy/mm/dd
 - 記事を公開しました
+
 :::
