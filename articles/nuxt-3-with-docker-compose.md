@@ -46,7 +46,7 @@ Docker Compose version 2.3.0
 プロジェクトを始めたいディレクトリに移動します、この文章では``NuxtProject``としています。
 
 ```diff
-+ Nuxt3Project/
++ NuxtProject/
 ```
 
 ### Dockerfile の作成
