@@ -7,7 +7,7 @@ published: true
 ---
 
 :::message
-これはNuxt.js 2.x向けの文章です、Nuxt 3で構築したい人は[こちら](nuxt-3-with-docker-compose.md)を参照してください。
+これはNuxt.js 2.x向けの文章です、Nuxt 3で構築したい人は[こちら](nuxt-3-with-docker-compose)を参照してください。
 :::
 
 ## 更新履歴
@@ -16,7 +16,7 @@ published: true
 
 2022/3/11
 
-- Nuxt 3向けの文章を書きました、[こちら](nuxt-3-with-docker-compose.md)から閲覧できます。
+- Nuxt 3向けの文章を書きました、[こちら](nuxt-3-with-docker-compose)から閲覧できます。
 
 2022/3/5
 
@@ -254,5 +254,5 @@ https://codogue.com/asciitree/
 ### 最後に
 
 途中でなぜかページ表示されずに3日くらい詰まってたんですけど[この記事](https://qiita.com/ngplus6655/items/6dd701450b9f9e8e2b86)で全部解決しました。
-もともとはあまりいい感じの導入方法が書かれている記事がないなーっていう理由で書いたんですけど必要性ないですね。
-上の記事を書いてくれた[ngplus6655](https://qiita.com/ngplus6655)さん、ジレンマから救っていただき本当にありがとうございました。
+もともとはあまりいい感じの導入方法が書かれている記事がないなーっていう理由で書いたんですけど必要ないですね。
+上の記事を書いてくれた[ngplus6655](https://qiita.com/ngplus6655)さん、本当にありがとうございました。
