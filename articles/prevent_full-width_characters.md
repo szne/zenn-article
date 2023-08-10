@@ -3,7 +3,8 @@ title: "CapsLockキーで英数にするとき全角英数にならないよう�
 emoji: "🅰️"
 type: "idea"
 topics: ["windows"]
-published: false
+published: true
+
 ---
 
 ## 更新履歴
@@ -64,6 +65,7 @@ PowerToysの設定が開いたら、左側のメニューからKeyboard manager�
 キーの再マップからCapsLockを半角/全角キーに割り当てます。
 
 以上の操作を行うことで、CapsLockキーで英数にするとき全角英数にならないようにすることができます。
+お疲れ様でした。
 
 ## 参考にしたもの
 
