@@ -3,7 +3,7 @@ title: "無知だけどNext.jsでポートフォリオサイトを作ったか�
 emoji: "🎉"
 type: "idea"
 topics: ["nextjs", "react"]
-published: false
+published: true
 ---
 
 ## 更新履歴
