@@ -11,7 +11,7 @@ published: true
 
 :::details click
 
-yyyy/mm/dd
+2023/8/10
 - 記事を公開しました
 
 :::
