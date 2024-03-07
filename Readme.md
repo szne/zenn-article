@@ -2,7 +2,7 @@
 
 ## 必要なもの
 - node.js
-- github cli
+- GitHub cli
 
 ## 使い方
 
@@ -11,7 +11,7 @@ gh repo clone szne/zenn-article
 npx zenn preview
 ```
 
-## コミットメッセージ規則
+## コミットメッセージ
 
 ### articles, books
 
@@ -25,7 +25,6 @@ npx zenn preview
 
 #### Type
 
-\<type>は以下のいずれかである必要があります。
 - **New**: 新しく作成
 - **Add**: 要素を追加
 - **Fix**: 内容を修正
@@ -37,12 +36,8 @@ npx zenn preview
 #### Scope
 
 スコープは、記事のマークダウンファイル名を短縮した物を使用します。
-例えば、「Docker composeでNuxt.js 2.xの開発環境を整えるメモ」のスコープは、``nuxt-2-with-docker-compose``となります。
+たとえば、「Docker composeでNuxt.js 2.xの開発環境を整えるメモ」のスコープは、``nuxt-2-with-docker-compose``となります。
 
 #### body
 
 bodyには、変更内容を簡潔に記載してください。
-
-### その他の変更
-
-[AngularJS's commit message convention](https://zenn.dev/szn/articles/angularjs-commit-messeage-convention-jp)に準拠してください。
