@@ -1,5 +1,5 @@
 ---
-title: "無知だけどNext.jsでポートフォリオサイトを作ったから見て"
+title: "Next.jsでポートフォリオを作ったので見てほしい"
 emoji: "🎉"
 type: "idea"
 topics: ["nextjs", "react"]
@@ -12,6 +12,9 @@ published: true
 
 2024/3/8
 - 記事を公開しました
+
+2024/3/9
+- タイトルを変更しました
 
 :::
 
