@@ -4,7 +4,6 @@ emoji: "🅰️"
 type: "idea"
 topics: ["windows"]
 published: true
-
 ---
 
 ## 更新履歴
