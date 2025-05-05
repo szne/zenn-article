@@ -1,7 +1,7 @@
 ---
 title: "Typstで使える日本語環境を構築する備忘録"
 emoji: "📝"
-type: "idea"
+type: "tech"
 topics: ["typst"]
 published: true
 ---
