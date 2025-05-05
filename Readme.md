@@ -18,7 +18,7 @@ npx zenn preview
 フォーマット
 
 ```
-<type>: <scope>
+<type>(<scope>): <subject>
 <BLANK LINE>
 <body>
 ```
@@ -32,6 +32,7 @@ npx zenn preview
 - **Arc**: 記事を非公開
 - **Del**: 記事を削除
 - **Style**: 見た目のみの変更
+- **Chore**: 補助ツールやライブラリの変更
 
 #### Scope
 
