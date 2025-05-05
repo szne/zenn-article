@@ -18,9 +18,8 @@ npx zenn preview
 フォーマット
 
 ```
-<type>(<scope>): <subject>
-<BLANK LINE>
-<body>
+<type>: <scope>
+<subject>
 ```
 
 #### Type
@@ -39,6 +38,6 @@ npx zenn preview
 スコープは、記事のマークダウンファイル名を短縮した物を使用します。
 たとえば、「Docker composeでNuxt.js 2.xの開発環境を整えるメモ」のスコープは、``nuxt-2-with-docker-compose``となります。
 
-#### body
+#### subject
 
-bodyには、変更内容を簡潔に記載してください。
+subjectには、変更内容を簡潔に記載します。
