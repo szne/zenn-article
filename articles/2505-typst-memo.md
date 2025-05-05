@@ -3,7 +3,7 @@ title: "Typstで使える日本語環境を構築する備忘録"
 emoji: "📝"
 type: "idea"
 topics: ["typst"]
-published: false
+published: true
 ---
 
 LaTeXのエラーに嫌気がさしたのでTypstへ乗り換えました。生成物の見た目とか調整するのにちょい詰まったのでやり方を備忘録として残しておきます。
