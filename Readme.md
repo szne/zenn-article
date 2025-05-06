@@ -6,8 +6,10 @@
 
 ## 使い方
 
-```fish
+```sh
 gh repo clone szne/zenn-article
+npm init --yes
+npm install zenn-cli@latest
 npx zenn preview
 ```
 
