@@ -116,8 +116,8 @@ Typst:
 ### Typstのインストール
 
 ```sh
-> winget install --id Typst.Typst -e
-> typst -V
+winget install --id Typst.Typst -e
+typst -V
 ```
 
 ``typst 0.13.1`` のようにバージョン情報が表示されれば成功です。
@@ -125,7 +125,7 @@ Typst:
 ### VS Codeの導入
 
 ```sh
-> winget install --id Microsoft.VisualStudioCode --silent --override "/VERYSILENT /NORESTART /MERGETASKS=!runcode,addcontextmenufiles,addcontextmenufolders,associatewithfiles,addtopath"
+winget install --id Microsoft.VisualStudioCode --silent --override "/VERYSILENT /NORESTART /MERGETASKS=!runcode,addcontextmenufiles,addcontextmenufolders,associatewithfiles,addtopath"
 ```
 
 #### 拡張機能の導入
@@ -162,7 +162,7 @@ VS Codeに以下の拡張機能を導入します。プロファイルを作っ�
 ターミナルにて以下のコマンドを実行します（ファイルが生成されるので汚れてもいいディレクトリで実行するのがオススメです）。
 
 ```sh
-> typst init @preview/js:0.1.3
+typst init @preview/js:0.1.3
 ```
 
 実行後、カレントディレクトリに ``js`` というフォルダーが生成されるので、その中に入り ``example.typ`` がうまくコンパイルできるかを確認しましょう。
