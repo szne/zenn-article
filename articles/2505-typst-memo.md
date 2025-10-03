@@ -108,6 +108,10 @@ Typst:
 
 ## TypstとVS Codeの導入方法
 
+:::message alert
+2025年10月追記：CLI上でコンパイルする予定がなければTypstのインストールは必要ありません
+:::
+
 ### 必要なもの
 
 - **ターミナル**（自分は ``PowerShell 7.5.1`` を使用）
@@ -159,6 +163,10 @@ VS Codeに以下の拡張機能を導入します。プロファイルを作っ�
 
 今回は三重大学の奥村晴彦名誉教授が作成した[**js**](https://typst.app/universe/package/js)（以下**typst-js**）を導入します。他にも木村駿介氏が作成した[jaconf-mscs](https://typst.app/universe/package/jaconf-mscs)というテンプレートなど、日本語環境を構築するテンプレートはいくつか存在します。将来的には自分に最適なテンプレートを探し出して使用するといいでしょう。
 
+:::message alert
+2025年10月追記：VSCodeで作業を行う場合、以下の作業は必要ありません。CLIでも必要ないかも
+:::
+
 ターミナルにて以下のコマンドを実行します（ファイルが生成されるので汚れてもいいディレクトリで実行するのがオススメです）。
 
 ```sh
@@ -193,7 +201,7 @@ typst init @preview/js:0.1.3
 
 + #show: js.with(
 +   lang: "ja",
-+   seriffont-cjk: "Harano Aji Mincho"
++   seriffont-cjk: "Harano Aji Mincho",
 +   sansfont-cjk: "Harano Aji Gothic"
 + )
 ```
